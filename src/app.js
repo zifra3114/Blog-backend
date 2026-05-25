@@ -9,11 +9,15 @@ import env from './config/env.js';
 import corsOptions from './config/cors.js';
 import logger from './config/logger.js';
 import routes from './routes/index.js';
+import connectDB from './config/db.js';
 import { apiLimiter } from './middlewares/rateLimiter.js';
 import errorHandler from './middlewares/errorHandler.js';
 import ApiError from './utils/ApiError.js';
 
 const app = express();
+
+// ✅ Connect DB only once
+await connectDB();
 
 // ─── Security middleware ───────────────────────────────────────
 
@@ -31,7 +35,7 @@ app.use(mongoSanitize());
 
 // ─── Body parsing ──────────────────────────────────────────────
 
-// Parse JSON bodies (limit to 10kb to prevent DoS)
+// Parse JSON bodies
 app.use(express.json({ limit: '10kb' }));
 
 // Parse URL-encoded bodies
@@ -47,7 +51,9 @@ if (env.NODE_ENV === 'development') {
 } else {
   app.use(
     morgan('combined', {
-      stream: { write: (msg) => logger.info(msg.trim()) },
+      stream: {
+        write: (msg) => logger.info(msg.trim()),
+      },
     })
   );
 }
@@ -55,6 +61,11 @@ if (env.NODE_ENV === 'development') {
 // ─── API routes ────────────────────────────────────────────────
 
 app.use('/api/v1', routes);
+
+// Test Route
+app.get('/', (req, res) => {
+  res.send('Backend Running Successfully 🚀');
+});
 
 // ─── 404 handler ───────────────────────────────────────────────
 
