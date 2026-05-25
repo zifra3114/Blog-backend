@@ -1,2 +1,10 @@
 {"level":"info","message":"🔄 Connecting to MongoDB using standard port bypass string...","timestamp":"2026-05-25T03:58:43.829Z"}
 {"code":"ECONNREFUSED","level":"error","message":"❌ MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.wgfh8rz.mongodb.net","timestamp":"2026-05-25T03:58:43.918Z"}
+{"level":"info","message":"🔄 Connecting to MongoDB using standard port bypass string...","timestamp":"2026-05-25T04:04:05.819Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.wgfh8rz.mongodb.net","timestamp":"2026-05-25T04:04:05.930Z"}
+{"level":"info","message":"🔄 Connecting to MongoDB using standard port bypass string...","timestamp":"2026-05-25T04:22:47.509Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.wgfh8rz.mongodb.net","timestamp":"2026-05-25T04:22:47.576Z"}
+{"level":"info","message":"🔄 Connecting to MongoDB using standard port bypass string...","timestamp":"2026-05-25T04:30:48.360Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.wgfh8rz.mongodb.net","timestamp":"2026-05-25T04:30:48.530Z"}
+{"level":"info","message":"🔄 Connecting to MongoDB using standard port bypass string...","timestamp":"2026-05-25T04:31:06.765Z"}
+{"code":"ECONNREFUSED","level":"error","message":"❌ MongoDB Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.wgfh8rz.mongodb.net","timestamp":"2026-05-25T04:31:06.857Z"}
